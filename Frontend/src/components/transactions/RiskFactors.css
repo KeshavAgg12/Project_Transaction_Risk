@@ -1,0 +1,33 @@
+.contrib {
+  display: grid;
+  grid-template-columns: 170px 1fr 56px;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
+  font-size: var(--text-md);
+  text-transform: capitalize;
+}
+
+.contrib > :last-child {
+  text-align: right;
+  color: var(--color-muted);
+}
+
+.contrib-track {
+  height: 8px;
+  background: var(--color-border);
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+.contrib-track i { display: block; height: 100%; }
+.contrib-track .raises { background: var(--color-danger); }
+.contrib-track .lowers { background: var(--color-success); }
+
+.rules-title { margin: var(--space-4) 0 var(--space-2); }
+
+.rules {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}

@@ -1,0 +1,89 @@
+.sidebar {
+  background: var(--color-sidebar);
+  color: #cbd5e1;
+  padding: var(--space-4) 10px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.brand {
+  padding: var(--space-1) var(--space-2) var(--space-4);
+  color: #fff;
+}
+
+.brand b {
+  display: block;
+  font-size: 18px;
+}
+
+.brand small {
+  color: #7f8db0;
+  font-size: 12px;
+}
+
+/* Navigation row (also used for the theme button and status rows) */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 9px 10px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #aab6d3;
+  font-size: var(--text-md);
+}
+
+.nav:hover {
+  background: #16224a;
+}
+
+.nav.active {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.nav.static {
+  cursor: default;
+}
+
+.nav-initial {
+  width: 18px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.status-dot {
+  color: #22c55e;
+}
+
+/* Collapsed mode hides the text and keeps only the icons */
+.collapsed .nav span,
+.collapsed .brand b,
+.collapsed .brand small {
+  display: none;
+}
+
+/* On mobile the sidebar becomes a drawer that slides in */
+@media (max-width: 900px) {
+  .sidebar {
+    position: fixed;
+    left: -250px;
+    width: 232px;
+    z-index: 30;
+    transition: left 0.2s;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .collapsed .nav span {
+    display: inline;
+  }
+}

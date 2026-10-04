@@ -1,0 +1,64 @@
+.top {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-5);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.crumbs {
+  font-size: var(--text-md);
+  color: var(--color-muted);
+}
+
+.crumbs strong {
+  color: var(--color-text);
+}
+
+.search {
+  flex: 1;
+  max-width: 420px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 7px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  color: var(--color-muted);
+}
+
+.iconbtn {
+  display: flex;
+  padding: 7px;
+  background: transparent;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+/* Menu button only exists on mobile; collapse button only on desktop */
+.menu {
+  display: none;
+}
+
+.desktop-only {
+  display: flex;
+}
+
+@media (max-width: 900px) {
+  .top {
+    padding: 10px var(--space-3);
+  }
+
+  .menu {
+    display: flex;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+}

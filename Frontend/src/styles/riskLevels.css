@@ -1,0 +1,5 @@
+/* One color per risk level. Used by RiskBadge and RiskScore. */
+.LOW      { color: var(--color-success); }
+.MEDIUM   { color: var(--color-warning); }
+.HIGH     { color: var(--color-high); }
+.CRITICAL { color: var(--color-danger); }

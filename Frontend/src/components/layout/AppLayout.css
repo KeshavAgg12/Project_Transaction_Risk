@@ -1,0 +1,27 @@
+/* Page shell: sidebar column + content column */
+.shell {
+  display: grid;
+  grid-template-columns: 232px 1fr;
+  min-height: 100vh;
+}
+
+.shell.collapsed {
+  grid-template-columns: 64px 1fr;
+}
+
+.main {
+  padding: var(--space-5);
+  max-width: 1400px;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .shell,
+  .shell.collapsed {
+    grid-template-columns: 1fr;
+  }
+
+  .main {
+    padding: var(--space-4);
+  }
+}

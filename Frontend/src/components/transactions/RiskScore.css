@@ -1,0 +1,17 @@
+/* Small progress bar next to the score; its color follows the risk level */
+.bar {
+  display: inline-block;
+  width: 60px;
+  height: 6px;
+  margin-right: var(--space-2);
+  vertical-align: middle;
+  background: var(--color-border);
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+.bar i {
+  display: block;
+  height: 100%;
+  background: currentColor;
+}

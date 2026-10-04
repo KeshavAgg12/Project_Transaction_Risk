@@ -1,0 +1,23 @@
+.kpi .l {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+
+.kpi .v {
+  margin: 6px 0 2px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.delta {
+  font-size: 12px;
+}
+
+.delta.up { color: var(--color-success); }
+.delta.down { color: var(--color-danger); }
+
+.delta-note {
+  color: var(--color-muted);
+}

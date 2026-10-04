@@ -1,0 +1,42 @@
+/* Design tokens. Change a value here and it updates across the whole app. */
+:root {
+  /* Colors (light theme) */
+  --color-primary: #2563eb;
+  --color-background: #f4f6fa;
+  --color-surface: #ffffff;
+  --color-border: #e2e6ee;
+  --color-text: #0f172a;
+  --color-muted: #64748b;
+  --color-success: #16a34a;
+  --color-warning: #d97706;
+  --color-danger: #dc2626;
+  --color-high: #ea580c;
+  --color-sidebar: #0b1530;
+
+  /* Spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+
+  /* Radius and shadow */
+  --radius: 8px;
+  --shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
+
+  /* Typography */
+  --font: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --text-sm: 13px;
+  --text-md: 14px;
+  --text-lg: 22px;
+}
+
+/* Dark theme overrides only the colors that change */
+:root[data-theme="dark"] {
+  --color-background: #0a1124;
+  --color-surface: #111b33;
+  --color-border: #1f2c4a;
+  --color-text: #e6ebf5;
+  --color-muted: #8a98b5;
+  --color-sidebar: #070d1d;
+}

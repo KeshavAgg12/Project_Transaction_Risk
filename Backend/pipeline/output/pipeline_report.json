@@ -1,0 +1,145 @@
+{
+  "run_id": "9274b8246c3f",
+  "started_at": "2026-10-04T03:54:12.258890+00:00",
+  "finished_at": "2026-10-04T03:54:46.047049+00:00",
+  "status": "success",
+  "source": "synthetic",
+  "total_rows": 100000,
+  "model_version": "lgbm-20261004-0924",
+  "per_level": {
+    "LOW": 98555,
+    "MEDIUM": 473,
+    "HIGH": 226,
+    "CRITICAL": 746
+  },
+  "per_decision": {
+    "Approved": 98555,
+    "Review": 699,
+    "Blocked": 746
+  },
+  "alerts_created": 1445,
+  "test_metrics": {
+    "precision": 0.792,
+    "recall": 0.495,
+    "f1": 0.6092307692307692,
+    "pr_auc": 0.6201494098933504,
+    "roc_auc": 0.9197438137755103,
+    "confusion_matrix": [
+      [
+        19548,
+        52
+      ],
+      [
+        202,
+        198
+      ]
+    ],
+    "threshold": 0.3999999999999999,
+    "n_test": 20000,
+    "n_test_fraud": 400,
+    "train_window_end": "2026-09-01 14:47:59+05:30",
+    "test_window_start": "2026-09-15 20:26:24+05:30"
+  },
+  "stages": [
+    {
+      "name": "Ingest",
+      "started_at": "2026-10-04T03:54:12.258900+00:00",
+      "finished_at": "2026-10-04T03:54:12.575321+00:00",
+      "duration_ms": 316,
+      "rows_in": 0,
+      "rows_out": 100000,
+      "error_count": 0,
+      "status": "success",
+      "message": "source=synthetic"
+    },
+    {
+      "name": "Validate",
+      "started_at": "2026-10-04T03:54:12.575739+00:00",
+      "finished_at": "2026-10-04T03:54:12.715075+00:00",
+      "duration_ms": 139,
+      "rows_in": 100000,
+      "rows_out": 100000,
+      "error_count": 0,
+      "status": "success",
+      "message": "0 invalid rows dropped; high-velocity rows=201"
+    },
+    {
+      "name": "Model",
+      "started_at": "2026-10-04T03:54:12.715585+00:00",
+      "finished_at": "2026-10-04T03:54:13.607536+00:00",
+      "duration_ms": 891,
+      "rows_in": 100000,
+      "rows_out": 100000,
+      "error_count": 0,
+      "status": "success",
+      "message": "trained (requested) lgbm-20261004-0924; test F1=0.609"
+    },
+    {
+      "name": "Score & Report",
+      "started_at": "2026-10-04T03:54:13.608628+00:00",
+      "finished_at": "2026-10-04T03:54:46.046669+00:00",
+      "duration_ms": 32438,
+      "rows_in": 100000,
+      "rows_out": 100000,
+      "error_count": 0,
+      "status": "success",
+      "message": "wrote transactions_scored.csv; upserted 100000 rows to PostgreSQL"
+    }
+  ],
+  "validation": {
+    "total_rows": 100000,
+    "valid_rows": 100000,
+    "checks": [
+      {
+        "name": "nulls",
+        "passed": true,
+        "failed_count": 0,
+        "detail": ""
+      },
+      {
+        "name": "amount_range",
+        "passed": true,
+        "failed_count": 0,
+        "detail": ""
+      },
+      {
+        "name": "hour_range",
+        "passed": true,
+        "failed_count": 0,
+        "detail": ""
+      },
+      {
+        "name": "merchant_category",
+        "passed": true,
+        "failed_count": 0,
+        "detail": ""
+      },
+      {
+        "name": "distance_non_negative",
+        "passed": true,
+        "failed_count": 0,
+        "detail": ""
+      },
+      {
+        "name": "velocity_valid",
+        "passed": true,
+        "failed_count": 0,
+        "detail": ""
+      },
+      {
+        "name": "payment_method",
+        "passed": true,
+        "failed_count": 0,
+        "detail": ""
+      },
+      {
+        "name": "duplicate_transaction_id",
+        "passed": true,
+        "failed_count": 0,
+        "detail": ""
+      }
+    ],
+    "high_velocity_count": 201,
+    "structural_errors": []
+  }
+}

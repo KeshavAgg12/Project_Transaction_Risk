@@ -1,0 +1,37 @@
+/* Shared by TransactionTable and RiskFactors */
+.tablewrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+
+th {
+  padding: 10px;
+  text-align: left;
+  font-weight: 500;
+  color: var(--color-muted);
+  white-space: nowrap;
+  border-bottom: 1px solid var(--color-border);
+}
+
+td {
+  padding: 10px;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--color-border);
+}
+
+tbody tr {
+  cursor: pointer;
+}
+
+tbody tr:hover {
+  background: color-mix(in srgb, var(--color-primary) 6%, transparent);
+}
+
+tbody tr.row-static {
+  cursor: default;
+}

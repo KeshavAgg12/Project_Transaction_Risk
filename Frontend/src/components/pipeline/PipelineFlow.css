@@ -1,0 +1,13 @@
+.flow {
+  display: flex;
+  flex-direction: column;
+  max-width: 520px;
+}
+
+/* Vertical line connecting two stages */
+.conn {
+  width: 2px;
+  height: 18px;
+  margin: 0 auto;
+  background: var(--color-border);
+}

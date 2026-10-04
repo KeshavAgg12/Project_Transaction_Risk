@@ -1,0 +1,70 @@
+/* Global styles: reset, base elements and layout helpers shared by every page. */
+@import "./variables.css";
+@import "./riskLevels.css";
+@import "./status.css";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: var(--color-background);
+  color: var(--color-text);
+  transition: background 0.2s, color 0.2s;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Muted helper text under titles and inside cards */
+.sub {
+  color: var(--color-muted);
+  margin: var(--space-1) 0 var(--space-5);
+  font-size: var(--text-md);
+}
+
+.sub.tight {
+  margin: 0 0 var(--space-2);
+}
+
+.spacer {
+  flex: 1;
+}
+
+/* Grid helpers. `.two` is a wide column plus a narrow column. */
+.grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.two {
+  grid-template-columns: 2fr 1fr;
+  margin-bottom: var(--space-4);
+}
+
+@media (max-width: 900px) {
+  .two {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

@@ -1,0 +1,19 @@
+.score-big {
+  margin: 0 0 var(--space-1);
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.flush {
+  margin: 0;
+}
+
+/* Reminder that the explanation is not from a real model yet */
+.demo {
+  margin-top: var(--space-3);
+  padding: var(--space-2) 10px;
+  font-size: 12px;
+  color: var(--color-warning);
+  border: 1px dashed var(--color-warning);
+  border-radius: var(--radius);
+}

@@ -1,0 +1,5 @@
+/* One color per pipeline status. Used by PipelineNode and NodeDetails. */
+.Healthy    { color: var(--color-success); }
+.Warning    { color: var(--color-warning); }
+.Error      { color: var(--color-danger); }
+.Processing { color: var(--color-primary); }

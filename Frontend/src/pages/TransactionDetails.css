@@ -1,0 +1,13 @@
+.back-link {
+  display: inline-block;
+  margin-bottom: var(--space-3);
+  font-size: var(--text-md);
+  color: var(--color-muted);
+}
+
+.score-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
